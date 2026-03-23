@@ -3,6 +3,7 @@ const Contact = require("../models/contact.model");
 exports.createContact = async (req, res) => {
     try {
         const newContact = new Contact({
+            userid: req.body.userid,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             email: req.body.email,
